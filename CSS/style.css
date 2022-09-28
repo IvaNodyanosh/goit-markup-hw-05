@@ -351,6 +351,7 @@ header ul {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4) 50%, rgba(47, 48, 58, 0.4)), url(../img/Img-hero.jpg);
     background-color: #C4C4C4;
     background-size: cover;
+    padding: 200px 0px;
 }
 
 .hero-button {
@@ -367,9 +368,7 @@ header ul {
 }
 
 
-.hero-container {
-    padding: 200px 0px
-}
+.hero-container {}
 
 /* стилізація секції наші переваги */
 .advantages {
@@ -739,6 +738,9 @@ header ul {
 .content-link {
     display: block;
     text-decoration: none;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .content-link:hover,
