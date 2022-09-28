@@ -48,7 +48,7 @@
         <section class="hero container">
             <div class="hero-container">
                 <h1 class="text-hero">Ефективні рішення для <br> вашого бізнесу</h1>
-                <button type="button" class="hero-button">Замовити послугу</button>
+                <button class="hero-button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
         <!--сторив секцію наші переваги-->
@@ -107,12 +107,23 @@
             <div class="container">
                 <h2 class="work-title">Чим ми займаємося</h2>
                 <ul class="work-list">
-                    <li><img class="work-img" src="./img/img.jpg" alt="створення структури продукту" width="370">
+                    <li>
+                        <div class="work"><img class="work-img" src="./img/img.jpg" alt="створення структури продукту"
+                                width="370">
+                            <p class="work-text">Десктопні додатки</p>
+                        </div>
                     </li>
-                    <li><img class="work-img" src="./img/img1.jpg" alt="форматування продукту для смартфону"
-                            width="370">
+                    <li>
+                        <div class="work"><img class="work-img" src="./img/img1.jpg"
+                                alt="форматування продукту для смартфону" width="370">
+                            <p class="work-text">Мобільні додатки</p>
+                        </div>
                     </li>
-                    <li><img class="work-img" src="./img/img2.jpg" alt="розробка дизайну" width="370"></li>
+                    <li>
+                        <div class="work"><img class="work-img" src="./img/img2.jpg" alt="розробка дизайну" width="370">
+                            <p class="work-text">Дизайнерські рішення</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -311,6 +322,13 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal animation"> <button class="button-modal" data-modal-close><svg height="11px" width="11px"
+                    class="modal-svg">
+                    <use href="./img/symbol-defs.svg#back"></use>
+                </svg> </button></div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
