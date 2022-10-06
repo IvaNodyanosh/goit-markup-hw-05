@@ -98,8 +98,7 @@
                                 планових завдань.</p>
                         </div>
                     </li>
-            </div>
-            </ul>
+                </ul>
             </div>
         </section>
         <!--створив секцію чим ми займаємось-->
@@ -236,11 +235,11 @@
                                             </svg></a>
                                     </li>
                                 </ul>
+                            </div>
                         </li>
+                    </ul>
                 </div>
-                </ul>
-        </div>
-        </section>
+            </section>
         </div>
         <div class="container">
             <section class="customers-section">
@@ -320,13 +319,67 @@
                     </li>
                 </ul>
             </div>
+            <form class="form-subscribe">
+                <label for="subscribe" class="subscribe-label">Підпишіться на розсилку</label>
+                <div class="subscribe-box"><input type="email" name="subscribe" id="subscribe" placeholder="Email"
+                        required>
+                    <button type="submit"><span class="button-subscribe-title">Підписатися<svg height="24px"
+                                width="24px">
+                                <use href="./img/symbol-defs.svg#icon-send"></use>
+                            </svg></span></button>
+                </div>
+            </form>
         </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal animation"> <button class="button-modal" data-modal-close><svg height="11px" width="11px"
+
+    <!--додав модвалку -->
+    <div class="backdrop is-hidden animation" data-modal>
+        <div class="modal"> <button class="button-modal" data-modal-close><svg height="11px" width="11px"
                     class="modal-svg">
                     <use href="./img/symbol-defs.svg#back"></use>
-                </svg> </button></div>
+                </svg> </button>
+            <form name="form-modal" class="form-modal">
+                <p>Залиште свої дані, ми вам передзвонимо</p>
+                <div class="form-parts"><label for="name">Ім'я</label>
+                    <div class="svg-box"><input name="username" id="name" type="text" placeholder=" " autofocus
+                            required><svg width="18px" height="18px">
+                            <use href="./img/symbol-defs.svg#person-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-parts"><label for="tel">Телефон</label>
+                    <div class="svg-box"><input name="telefon" id="tel" type="tel" placeholder=" " required><svg
+                            width="18px" height="18px">
+                            <use href="./img/symbol-defs.svg#phone-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="form-parts"><label for="mail">Пошта</label>
+                    <div class="svg-box"><input name="mail" id="mail" type="email" placeholder=" " required><svg
+                            width="18px" height="18px">
+                            <use href="./img/symbol-defs.svg#email-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="comment-box"><label for="comment">Коментар</label><textarea name="comment" id="comment"
+                        placeholder="Введіть текст"></textarea></div>
+                <div class="conditions-box">
+                    <label>
+                        <input name="conditions" class="condition" id="conditions" type="checkbox" required>
+                        <svg width="16px" height="15px" class="check">
+                            <use href="./img/symbol-defs.svg#border"></use>
+                        </svg>
+                        <svg width="16px" height="15px" class="check-svg">
+                            <use href="./img/symbol-defs.svg#check"></use>
+                        </svg>
+                        Погоджуюся з розсилкою та приймаю &nbsp;<a href="" class="condition-link">Умови договору</a>
+                    </label>
+                </div>
+                <div class="submit-button"><button type="submit"><span class="submit-text">Відправити</span></button>
+                </div>
+            </form>
+        </div>
+
     </div>
     <script src="./js/modal.js"></script>
 </body>

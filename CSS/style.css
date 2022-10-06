@@ -326,6 +326,83 @@ header ul {
 }
 
 
+/* розсилка */
+
+.form-subscribe {
+    margin-left: 93px;
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    display: block;
+}
+
+
+
+.subscribe-box>button {
+    width: 200px;
+    height: 50px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-box svg {
+    fill: #FFFFFF;
+    margin-left: 10px;
+}
+
+.subscribe-box>input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-box>input::placeholder {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.03em;
+}
+
+.subscribe-box {
+    display: flex;
+}
+
+.button-subscribe-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1, 9;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 
 
 /* СТИЛІЗАЦІЯ MAIN ДЛЯ СТОРІНКИ "СТУДІЯ" */
@@ -791,7 +868,7 @@ header ul {
     top: 8px;
     right: 8px;
     position: absolute;
-    transition-property: background-color;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
@@ -799,7 +876,7 @@ header ul {
 
 .button-modal:hover,
 .button-modal:focus {
-    background-color: #2196F3;
+    fill: var(--accent-color);
 }
 
 .backdrop {
@@ -819,6 +896,196 @@ header ul {
     transform: translate(-50%, -50%);
     background-color: #FFFFFF;
     position: absolute;
+    padding: 40px;
+}
+
+.form-modal>p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+
+.form-parts,
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.form-parts>label,
+.comment-box>label {
+    margin-bottom: 4px;
+}
+
+.form-parts input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    outline: none;
+    cursor: pointer;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.form-parts input:not(:placeholder-shown) {
+    border: 1px solid #2196F3;
+}
+
+.form-parts input:not(:placeholder-shown)+svg {
+    fill: var(--accent-color);
+}
+
+.form-parts input+svg {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.svg-box {
+    position: relative;
+}
+
+.svg-box svg {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: 12px;
+    transform: translateY(50%);
+}
+
+.comment-box>textarea {
+    resize: none;
+    height: 120px;
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    cursor: pointer;
+}
+
+.comment-box>textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.comment-box>textarea:not(:placeholder-shown) {
+    border: 1px solid #2196F3;
+}
+
+.comment-box:hover textarea,
+.comment-box:focus textarea {
+    border: 1px solid #2196F3;
+}
+
+.comment-box {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.conditions-box>label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: #757575;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.condition {
+    appearance: none;
+}
+
+.check {
+    position: relative;
+    margin-right: 8px;
+    display: flex;
+}
+
+.form-parts svg {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-svg {
+    position: absolute;
+    fill: var(--accent-color);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.condition:checked~.check-svg {
+    opacity: 1;
+}
+
+.form-parts:hover input,
+.form-parts:focus input {
+    border: 1px solid #2196F3;
+}
+
+.form-parts:hover svg,
+.form-parts:focus svg {
+    fill: var(--accent-color);
+}
+
+.form-parts {
+    margin-bottom: 10px;
+}
+
+.condition-link {
+    color: var(--accent-color);
+}
+
+.conditions-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.submit-button {
+    justify-content: center;
+    display: flex;
+}
+
+.submit-button>button {
+    width: 200px;
+    height: 50px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.submit-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
 }
 
 .animation {
